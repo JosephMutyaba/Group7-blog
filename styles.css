@@ -56,3 +56,9 @@ main {
     flex-direction: row;
     justify-content: space-between;
 }
+
+.container-members{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
