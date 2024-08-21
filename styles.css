@@ -55,11 +55,11 @@ main {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    vertical-align:center;
 }
 
 .container-members{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    vertical-align:center;
 }
