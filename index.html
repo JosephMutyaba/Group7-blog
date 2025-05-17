@@ -12,7 +12,7 @@
             --secondary: #81C784;
             --accent: #FF8F00;
             --light: #F1F8E9;
-            --dark: #1B5E20;
+            --dark: #033609;
             --text: #333333;
             --gray: #757575;
         }
@@ -330,30 +330,111 @@
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 3rem 0;
+            padding: 2.5rem 0;
+            position: relative;
+        }
+
+        .container-footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer-brand {
             text-align: center;
+            margin-bottom: 1.5rem;
         }
 
-        .social-links {
+        .logo {
             display: flex;
+            align-items: center;
             justify-content: center;
-            margin: 2rem 0;
-        }
-
-        .social-links a {
-            color: white;
             font-size: 1.5rem;
-            margin: 0 1rem;
-            transition: all 0.3s ease;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
         }
 
-        .social-links a:hover {
+        .tagline {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-heading {
+            color: white;
+            margin-bottom: 1.25rem;
+            text-align: center;
+            font-size: 1.3rem;
+            position: relative;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.25rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-card h4 {
+            color: white;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .contact-card p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-email {
+            word-break: break-all;
+        }
+
+        .contact-card i {
+            min-width: 18px;
+            text-align: center;
             color: var(--accent);
-            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            text-align: center;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mission {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
         }
 
         .copyright {
-            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 2rem 0;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
         }
 
         .mobile-menu {
@@ -703,35 +784,39 @@
             </div>
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="/api/placeholder/400/400" alt="MUTYABA JOSEPH" class="member-img">
+                    <img src="joseph.jpg" alt="MUTYABA JOSEPH" class="member-img">
                     <div class="member-info">
-                        <h3><a href="main/pages/joseph.html" style="color: var(--dark); text-decoration: none;">MUTYABA JOSEPH</a></h3>
+                        <h3><a href="main/pages/joseph.html" style="color: var(--dark); text-decoration: none;">MUTYABA
+                                JOSEPH</a></h3>
                         <div class="member-role">Mobile Developer & Backend </div>
                         <p>Developed the Android application with background notification support and voice reminders.
                         </p>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="/api/placeholder/400/400" alt="NAMPWERA ELISHA" class="member-img">
+                    <img src="nex.jpg" alt="NAMPWERA ELISHA" class="member-img">
                     <div class="member-info">
-                        <h3><a href="main/pages/elisha.html" style="color: var(--dark); text-decoration: none;">NAMPWERA ELISHA</a></h3>
+                        <h3><a href="main/pages/elisha.html" style="color: var(--dark); text-decoration: none;">NAMPWERA
+                                ELISHA</a></h3>
                         <div class="member-role">Hardware & Embedded Systems Engineer</div>
                         <p>Designed the wearable device, developed firmware for ESP32, and integrated GSM & sensors.</p>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="/api/placeholder/400/400" alt="ANSINGUZA GARTON " class="member-img">
+                    <img src="garton.jpeg" alt="ANSINGUZA GARTON " class="member-img">
                     <div class="member-info">
-                        <h3><a href="main/pages/garton.html" style="color: var(--dark); text-decoration: none;">ANSINGUZA GARTON</a></h3>
-                        <div class="member-role">System Integration  & Web Developer</div>
+                        <h3><a href="main/pages/garton.html"
+                                style="color: var(--dark); text-decoration: none;">ANSINGUZA GARTON</a></h3>
+                        <div class="member-role">System Integration & Web Developer</div>
                         <p>Built the backend APIs, Supabase integration, and managed real-time updates for the caregiver
                             dashboard.</p>
                     </div>
                 </div>
                 <div class="team-member">
-                    <img src="/api/placeholder/400/400" alt="NANTAMBI ELIZABETH" class="member-img">
+                    <img src="eliza.jpeg" alt="NANTAMBI ELIZABETH" class="member-img">
                     <div class="member-info">
-                        <h3><a href="main/pages/elizabeth.html" style="color: var(--dark); text-decoration: none;">NANTAMBI ELIZABETH</a></h3>
+                        <h3><a href="main/pages/elizabeth.html"
+                                style="color: var(--dark); text-decoration: none;">NANTAMBI ELIZABETH</a></h3>
                         <div class="member-role">UI/UX & Deployment</div>
                         <p>Led PWA development, integration across platforms, and GitHub-based version control.</p>
                     </div>
@@ -758,7 +843,7 @@
                             Technology on Elderly Care</h3>
                         <p style="margin-bottom: 1.5rem;">Exploring how wearable devices like ECMSS are transforming
                             elderly care by providing real-time monitoring and emergency response capabilities.</p>
-                        <a href="blog-single.html"
+                        <a href="blog/post1.html"
                             style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center;">Read
                             More <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
                     </div>
@@ -828,132 +913,149 @@
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: left; margin-bottom: 2rem;">
-                <div>
-                    <div class="logo" style="margin-bottom: 1rem; justify-content: flex-start;">
+        <footer>
+            <div class="container-footer">
+                <div class="footer-brand">
+                    <div class="logo">
                         <i class="fas fa-heartbeat"></i>
                         ECM<span>SS</span>
                     </div>
-                    <p>Empowering Elderly Well-being Through Innovation</p>
-                    <div class="social-links" style="justify-content: flex-start; margin: 1rem 0;">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                    <p class="tagline">Elderly Care Monitoring & Support System</p>
+                </div>
+
+                <div class="team-contacts">
+                    <h3 class="footer-heading">Team Contacts</h3>
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <h4>Joseph Mutyaba</h4>
+                            <p><i class="fas fa-envelope"></i> <span
+                                    class="contact-email">josephsteinson@gmail.com</span>
+                            </p>
+                            <p><i class="fas fa-phone"></i> 0772204901</p>
+                        </div>
+                        <div class="contact-card">
+                            <h4>Elizabeth Nantambi</h4>
+                            <p><i class="fas fa-envelope"></i> <span class="contact-email">lizn0602@gmail.com</span></p>
+                            <p><i class="fas fa-phone"></i> 0750195792</p>
+                        </div>
+                        <div class="contact-card">
+                            <h4>Garton Ansinguza</h4>
+                            <p><i class="fas fa-envelope"></i> <span class="contact-email">gartonival@gmail.com</span>
+                            </p>
+                            <p><i class="fas fa-phone"></i> 0759503920</p>
+                        </div>
+                        <div class="contact-card">
+                            <h4>Elisha Nampwera</h4>
+                            <p><i class="fas fa-envelope"></i> <span
+                                    class="contact-email">nampweraelisha34@gmail.com</span>
+                            </p>
+                            <p><i class="fas fa-phone"></i> 0784183584</p>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent);">Quick Links</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.5rem;"><a href="#about"
-                                style="color: white; text-decoration: none;">About</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="#features"
-                                style="color: white; text-decoration: none;">Features</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="#architecture"
-                                style="color: white; text-decoration: none;">Architecture</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="product.html"
-                                style="color: white; text-decoration: none;">Product Details</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="#blog"
-                                style="color: white; text-decoration: none;">Blog</a></li>
+
+                <div class="footer-bottom">
+                    <p class="mission">Empowering Elderly Well-being Through Innovation</p>
+                    <p class="copyright">&copy; 2025 ECMSS. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
 
 
-                        <script>
-                            // Mobile menu toggle
-                            const menuToggle = document.getElementById('menuToggle');
-                            const navLinks = document.getElementById('navLinks');
+        <script>
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
 
-                            menuToggle.addEventListener('click', () => {
-                                navLinks.classList.toggle('active');
-                            });
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
 
-                            // Smooth scrolling for navigation links
-                            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                                anchor.addEventListener('click', function (e) {
-                                    e.preventDefault();
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
 
-                                    // Close mobile menu if open
-                                    navLinks.classList.remove('active');
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
 
-                                    // Scroll to the section
-                                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
-                                });
-                            });
+                    // Scroll to the section
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
 
-                            // Contact form handling
-                            document.getElementById('contactForm').addEventListener('submit', function (e) {
-                                e.preventDefault();
+            // Contact form handling
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                e.preventDefault();
 
-                                const formStatus = document.getElementById('formStatus');
-                                const name = document.getElementById('name').value;
-                                const email = document.getElementById('email').value;
-                                const subject = document.getElementById('subject').value;
-                                const message = document.getElementById('message').value;
+                const formStatus = document.getElementById('formStatus');
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
 
-                                // Form validation
-                                if (!name || !email || !subject || !message) {
-                                    formStatus.style.display = 'block';
-                                    formStatus.style.color = '#f44336';
-                                    formStatus.textContent = 'Please fill in all fields';
-                                    return;
-                                }
+                // Form validation
+                if (!name || !email || !subject || !message) {
+                    formStatus.style.display = 'block';
+                    formStatus.style.color = '#f44336';
+                    formStatus.textContent = 'Please fill in all fields';
+                    return;
+                }
 
-                                // Email validation
-                                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                                if (!emailRegex.test(email)) {
-                                    formStatus.style.display = 'block';
-                                    formStatus.style.color = '#f44336';
-                                    formStatus.textContent = 'Please enter a valid email';
-                                    return;
-                                }
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    formStatus.style.display = 'block';
+                    formStatus.style.color = '#f44336';
+                    formStatus.textContent = 'Please enter a valid email';
+                    return;
+                }
 
-                                // In a real implementation, you would send this data to your backend
-                                // For demonstration purposes, we'll simulate a successful submission
-                                formStatus.style.display = 'block';
-                                formStatus.style.color = '#4CAF50';
-                                formStatus.textContent = 'Message sent successfully!';
+                // In a real implementation, you would send this data to your backend
+                // For demonstration purposes, we'll simulate a successful submission
+                formStatus.style.display = 'block';
+                formStatus.style.color = '#4CAF50';
+                formStatus.textContent = 'Message sent successfully!';
 
-                                // Clear form
-                                document.getElementById('name').value = '';
-                                document.getElementById('email').value = '';
-                                document.getElementById('subject').value = '';
-                                document.getElementById('message').value = '';
+                // Clear form
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('subject').value = '';
+                document.getElementById('message').value = '';
 
-                                // Reset status message after 5 seconds
-                                setTimeout(() => {
-                                    formStatus.style.display = 'none';
-                                }, 5000);
+                // Reset status message after 5 seconds
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 5000);
 
-                                // In a real implementation, you would use fetch or XMLHttpRequest:
-                                /*
-                                fetch('https://your-server-endpoint.com/contact', {
-                                    method: 'POST',
-                                    headers: {
-                                        'Content-Type': 'application/json',
-                                    },
-                                    body: JSON.stringify({ name, email, subject, message })
-                                })
-                                .then(response => response.json())
-                                .then(data => {
-                                    formStatus.style.display = 'block';
-                                    formStatus.style.color = '#4CAF50';
-                                    formStatus.textContent = 'Message sent successfully!';
-                                    // Clear form
-                                    document.getElementById('contactForm').reset();
-                                })
-                                .catch(error => {
-                                    formStatus.style.display = 'block';
-                                    formStatus.style.color = '#f44336';
-                                    formStatus.textContent = 'There was an error sending your message. Please try again.';
-                                    console.error('Error:', error);
-                                });
-                                */
-                            });
-                        </script>
+                // In a real implementation, you would use fetch or XMLHttpRequest:
+                /*
+                fetch('https://your-server-endpoint.com/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name, email, subject, message })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    formStatus.style.display = 'block';
+                    formStatus.style.color = '#4CAF50';
+                    formStatus.textContent = 'Message sent successfully!';
+                    // Clear form
+                    document.getElementById('contactForm').reset();
+                })
+                .catch(error => {
+                    formStatus.style.display = 'block';
+                    formStatus.style.color = '#f44336';
+                    formStatus.textContent = 'There was an error sending your message. Please try again.';
+                    console.error('Error:', error);
+                });
+                */
+            });
+        </script>
 </body>
 
 </html>

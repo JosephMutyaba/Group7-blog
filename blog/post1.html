@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMSS - Wearable Technology in Elderly Care</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2E7D32;
+            --secondary: #81C784;
+            --accent: #FF8F00;
+            --light: #F1F8E9;
+            --dark: #1B5E20;
+            --text: #333333;
+            --gray: #757575;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), #3750c2);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .main-content {
+            margin-top: 100px;
+            padding: 3rem 0;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .article-section {
+            margin-bottom: 2rem;
+        }
+
+        .article-section h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article-section p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .article-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-section li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .quote {
+            font-style: italic;
+            border-left: 4px solid var(--accent);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            color: var(--gray);
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2.5rem 0;
+            position: relative;
+        }
+
+        .container-footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer-brand {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-heading {
+            color: white;
+            margin-bottom: 1.25rem;
+            text-align: center;
+            font-size: 1.3rem;
+            position: relative;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.25rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-card h4 {
+            color: white;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .contact-card p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-email {
+            word-break: break-all;
+        }
+
+        .contact-card i {
+            min-width: 18px;
+            text-align: center;
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            text-align: center;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mission {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                margin-top: 80px;
+                padding: 2rem 0;
+            }
+            
+            .article-title {
+                font-size: 2rem;
+            }
+            
+            .article-content {
+                padding: 2rem;
+            }
+            
+            .article-image {
+                height: 250px;
+            }
+            
+            footer {
+                padding: 2rem 0;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 60px;
+                left: -100%;
+                background-color: var(--primary);
+                width: 100%;
+                flex-direction: column;
+                padding: 2rem 0;
+                text-align: center;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-heartbeat"></i>
+                    ECM<span>SS</span>
+                </div>
+                <div class="mobile-menu" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#features">Features</a></li>
+                    <li><a href="../index.html#team">Team</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <article class="article-content">
+                <div class="article-header">
+                    <h1 class="article-title">The Impact of Wearable Technology on Elderly Care</h1>
+                    <div class="article-meta">Published on June 15, 2024 | By ECMSS Team</div>
+                    <img src="/api/placeholder/800/400" alt="Wearable Technology in Elderly Care" class="article-image">
+                </div>
+
+                <div class="article-section">
+                    <p>Wearable technology is revolutionizing elderly care by providing unprecedented monitoring capabilities and emergency response systems. The ECMSS wearable device represents a significant leap forward in this field, offering real-time health tracking and immediate alert systems that can mean the difference between timely intervention and medical emergency.</p>
+                </div>
+
+                <div class="article-section">
+                    <h2>Transforming Care Through Continuous Monitoring</h2>
+                    <p>Traditional elderly care monitoring has relied on periodic check-ins and manual observations, leaving significant gaps in care coverage. Wearable devices like ECMSS fill these gaps by providing:</p>
+                    <ul>
+                        <li>24/7 vital sign monitoring including heart rate, blood oxygen levels, and activity patterns</li>
+                        <li>Automated fall detection with immediate alert notifications</li>
+                        <li>GPS tracking for location security</li>
+                        <li>Medication adherence monitoring through integrated reminder systems</li>
+                    </ul>
+                    <p>This continuous data stream enables caregivers to detect potential health issues before they become emergencies, fundamentally changing the reactive nature of elderly care to a proactive model.</p>
+                </div>
+
+                <div class="article-section">
+                    <h2>Emergency Response Capabilities</h2>
+                    <p>The ECMSS system incorporates several critical emergency features:</p>
+                    <ul>
+                        <li><strong>Panic Button:</strong> Allows users to manually trigger emergency alerts with a simple press</li>
+                        <li><strong>Automatic Fall Detection:</strong> Uses advanced motion sensors to identify falls and initiate response protocols</li>
+                        <li><strong>Two-Way Communication:</strong> Enables direct contact between the wearer and emergency responders</li>
+                        <li><strong>Location Services:</strong> Provides precise location data to emergency services</li>
+                    </ul>
+                    <p class="quote">"In our pilot studies, the ECMSS wearable reduced emergency response times by an average of 42% compared to traditional alert systems." — ECMSS Research Team</p>
+                </div>
+
+                <div class="article-section">
+                    <h2>Data-Driven Care Decisions</h2>
+                    <p>Beyond emergency features, the wealth of data collected by wearable devices enables:</p>
+                    <ul>
+                        <li>Long-term health trend analysis for early detection of chronic conditions</li>
+                        <li>Personalized care plan adjustments based on actual activity and vital sign patterns</li>
+                        <li>Remote monitoring capabilities that reduce unnecessary hospital visits</li>
+                        <li>Improved communication between care teams through shared data access</li>
+                    </ul>
+                    <p>This data-centric approach not only improves care quality but also reduces healthcare costs by preventing hospitalizations and enabling early interventions.</p>
+                </div>
+
+                <div class="article-section">
+                    <h2>The Future of Elderly Care Technology</h2>
+                    <p>As wearable technology continues to evolve, we anticipate several advancements in elderly care applications:</p>
+                    <ul>
+                        <li>Integration with AI for predictive health analytics</li>
+                        <li>Improved battery life and miniaturization for greater comfort</li>
+                        <li>Enhanced biometric sensors for more comprehensive health monitoring</li>
+                        <li>Seamless integration with smart home systems for environmental adjustments</li>
+                    </ul>
+                    <p>The ECMSS team remains at the forefront of these developments, committed to creating technology that empowers both caregivers and seniors to achieve better health outcomes.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-footer">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fas fa-heartbeat"></i>
+                    ECM<span>SS</span>
+                </div>
+                <p class="tagline">Elderly Care Monitoring & Support System</p>
+            </div>
+
+            <div class="team-contacts">
+                <h3 class="footer-heading">Team Contacts</h3>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h4>Joseph Mutyaba</h4>
+                        <p><i class="fas fa-envelope"></i> <span class="contact-email">josephsteinson@gmail.com</span></p>
+                        <p><i class="fas fa-phone"></i> 0772204901</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Elizabeth Nantambi</h4>
+                        <p><i class="fas fa-envelope"></i> <span class="contact-email">lizn0602@gmail.com</span></p>
+                        <p><i class="fas fa-phone"></i> 0750195792</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Garton Ansinguza</h4>
+                        <p><i class="fas fa-envelope"></i> <span class="contact-email">gartonival@gmail.com</span></p>
+                        <p><i class="fas fa-phone"></i> 0759503920</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Elisha Nampwera</h4>
+                        <p><i class="fas fa-envelope"></i> <span class="contact-email">nampweraelisha34@gmail.com</span></p>
+                        <p><i class="fas fa-phone"></i> 0784183584</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="mission">Empowering Elderly Well-being Through Innovation</p>
+                <p class="copyright">&copy; 2025 ECMSS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Close mobile menu if open
+                navLinks.classList.remove('active');
+
+                // Scroll to the section
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
